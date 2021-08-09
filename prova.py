@@ -204,8 +204,6 @@ def registrarUsuario():
         db.session.add(novoUsuario)  
         db.session.commit()    
         
-        # sucess = {"sucess":{"text":"usuario registrado com sucesso"}}
-        # return jsonify(sucess)
         resposta = {"idUsuario":int(novoUsuario.idUsuario),
                     "nomeUsuario":str(novoUsuario.nomeUsuario),
                     "telefoneUsuario":str(novoUsuario.telefoneUsuario)}
